@@ -1,6 +1,6 @@
-#Proxy
+# Proxy
 
-##概念
+## 概念
 > Proxy 用于修改某些操作的默认行为，等同于在语言层面做出修改，所以属于一种“元编程”（meta programming），即对编程语言进行编程。
 
 > Proxy 可以理解成，在目标对象之前架设一层“拦截”，外界对该对象的访问，都必须先通过这层拦截，因此提供了一种机制，可以对外界的访问进行过滤和改写。Proxy 这个词的原意是代理，用在这里表示由它来“代理”某些操作，可以译为“代理器”。
@@ -48,7 +48,7 @@ Proxy 支持的拦截操作一览：
 
 如果一个属性不可配置（configurable）和不可写（writable），则该属性不能被代理，通过 Proxy 对象访问该属性会报错。
 
-##Proxy.revocable()
+## Proxy.revocable()
 `Proxy.revocable`方法返回一个可取消的 Proxy 实例。
 
 ```
@@ -67,5 +67,4 @@ proxy.foo // TypeError: Revoked
 
 `Proxy.revocable`的一个使用场景是，目标对象不允许直接访问，必须通过代理访问，一旦访问结束，就收回代理权，不允许再次访问。
 
-##Proxy中的this问题
-
+## Proxy中的this问题
