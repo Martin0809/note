@@ -23,7 +23,7 @@ proxy.a;
 ```
 ES6原生提供Proxy构造函数，用来生成Proxy实例。
 
-```
+```js
 var proxy = new Proxy(target, handler);
 // target参数表示所要拦截的目标对象，
 // handler参数也是一个对象，用来定制拦截行为。
@@ -51,7 +51,7 @@ Proxy 支持的拦截操作一览：
 ## Proxy.revocable()
 `Proxy.revocable`方法返回一个可取消的 Proxy 实例。
 
-```
+```js
 let target = {};
 let handler = {};
 

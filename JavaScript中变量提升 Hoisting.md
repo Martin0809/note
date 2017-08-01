@@ -1,7 +1,7 @@
 # JavaScript中变量提升 Hoisting
 
 ## 那么问题来了
-```
+```js
 var x = 1;
 console.log(x);
 (function () {
@@ -17,7 +17,7 @@ console.log(x);
 
 **1.先来说说作用域（scoping）**
 
-```
+```js
 var x = 1;
 console.log(x);//1
 if (true) {
@@ -30,7 +30,7 @@ console.log(x);//2
 不像java，javascript中没有块级作用域，只有函数作用域，所以if语句中声明的`x`变量会覆盖掉最开始声明的`x`变量。
 为了解决上述问题带来的宽扰，我们可以利用匿名函数：
 
-```
+```js
 var x = 1;
 console.log(x);//1
 if (true) {
@@ -45,7 +45,7 @@ console.log(x);//1
 **2.终于到了变量提升（hoisting）**
 举个例子：
 
-```
+```js
 (function () {
 	var x = 1;
 	var y = 2;
@@ -55,7 +55,7 @@ console.log(x);//1
 
 但实际上，它是这个样子的：
 
-```
+```js
 (function () {
 	var x, y, z;
 	x = 1;
@@ -66,7 +66,7 @@ console.log(x);//1
 
 回过头来，我们把开头的问题改成这种写法，看看结果是不是一样：
 
-```
+```js
 var x = 1;
 console.log(x);
 (function () {
@@ -80,7 +80,7 @@ console.log(x);
 
 - 函数声明方式提升
 
-```
+```js
 (function test() {
 	fun();
 	function fun() {
@@ -91,7 +91,7 @@ console.log(x);
 
 - 函数表达式方式提升
 
-```
+```js
 (function () {
 	fun();
 	var fun = function () {
